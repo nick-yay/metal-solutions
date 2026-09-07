@@ -35,8 +35,10 @@ CREATE TABLE ajudante_qualificacao (
 );
 
 CREATE TABLE ordens_producao (
-    funcionario_id BIGINT PRIMARY KEY,
-    descricao TEXT,
+    id BIGINT PRIMARY KEY,
+    produto VARCHAR(100) NOT NULL,
+    quantidade INT NOT NULL,
+    descricao TEXT NOT NULL,
     status VARCHAR(30) NOT NULL DEFAULT 'PENDENTE',  -- PENDENTE, EM_ANDAMENTO, CONCLUIDO, CANCELADO
     criado_em TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
