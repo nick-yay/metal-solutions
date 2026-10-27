@@ -21,7 +21,7 @@ import lombok.AccessLevel;
 @Entity
 @Table(name = "ordens_producao") 
 @Inheritance (strategy = jakarta.persistence.InheritanceType.JOINED)
-public sealed class OrdemProducao permits EtapaProcesso{
+public class OrdemProducao{
     @Id 
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;

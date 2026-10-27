@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity 
 @Table(name = "funcionarios")
 @Inheritance(strategy = jakarta.persistence.InheritanceType.JOINED)
-public sealed abstract class Funcionario permits RH, AjudanteGeral {
+public abstract class Funcionario {
     @Id 
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
