@@ -12,6 +12,7 @@ public record AjudanteGeralResponseDTO(
     String cpf,
     Cargo cargo,
     Turno turno,
+    Boolean isAtivo,
     BigDecimal salario,
     Set<QualificacaoResponseDTO> qualificacoes
 ) {}
