@@ -36,7 +36,7 @@ public abstract class Funcionario {
     @Enumerated(EnumType.STRING)
     @Column (nullable = false)
     private Cargo cargo;
-    private boolean ativo;
+    private boolean ativo=true;
     @Setter(AccessLevel.NONE)
     @Column (name = "criado_em", insertable = false, updatable = false)
     private LocalDateTime criadoEm;
