@@ -22,7 +22,7 @@ import lombok.Setter;
 @Entity 
 @Table(name = "funcionarios")
 @Inheritance(strategy = jakarta.persistence.InheritanceType.JOINED)
-public sealed abstract class Funcionario permits RH, AjudanteGeral {
+public abstract class Funcionario {
     @Id 
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long id;
@@ -36,7 +36,7 @@ public sealed abstract class Funcionario permits RH, AjudanteGeral {
     @Enumerated(EnumType.STRING)
     @Column (nullable = false)
     private Cargo cargo;
-    private boolean ativo;
+    private boolean ativo=true;
     @Setter(AccessLevel.NONE)
     @Column (name = "criado_em", insertable = false, updatable = false)
     private LocalDateTime criadoEm;

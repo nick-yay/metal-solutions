@@ -15,7 +15,7 @@ import lombok.EqualsAndHashCode;
 @Data 
 @EqualsAndHashCode (callSuper = true)
 @Entity 
-@Table (name = "ajudantes_gerais")
+@Table (name = "ajudante_geral")
 @PrimaryKeyJoinColumn(name = "funcionario_id")
 public final class AjudanteGeral extends Funcionario{
     @ManyToMany 
